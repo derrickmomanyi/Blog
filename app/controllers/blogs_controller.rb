@@ -43,7 +43,7 @@ class BlogsController < ApplicationController
           end
 
           def blog_params
-            params.permit(:title, :genre, :network, :image, :year, :seasons)
+            params.permit(:title, :genre, :network, :image, :year, :seasons, :rating, :about)
           end
 
           def render_not_found_response

@@ -1,21 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
+import React from 'react';
+import { Route, Routes } from "react-router-dom";
+import BlogContainer from './components/BlogContainer'
+import AddBlog from './components/AddBlog'
+
+import Navbar from './components/Navbar'
+
 
 function App() {
 
-  const [blogs, setBlogs] = useState([])
-
-  useEffect(() => {
-    fetch("/blogs")
-    .then((res) => res.json())
-    .then((blogs) => setBlogs(blogs))
-  }, [])
-
-  console.log(blogs);
-  
   return (
     <div >
-      <h1>My blog</h1>
+        
+      <Navbar  />
+      <Routes>
+        <Route path="/" element = {<BlogContainer />} />
+        <Route path="addblog" element ={ <AddBlog   />}/>               
+       
+
+      </Routes>
     </div>
   );
 }
