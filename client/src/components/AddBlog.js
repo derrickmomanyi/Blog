@@ -157,7 +157,7 @@ function AddBlog(){
             name ='about'
              value = {about} 
              className="form-control" 
-             placeholder="A Summary of the Show" 
+             placeholder="A Summary of the Show (not less than 100 words)" 
              onChange ={(e) => setAbout(e.target.value)}/>
         </div>
 
