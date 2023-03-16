@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import './App.css';
 
 function App() {
 
@@ -12,11 +12,10 @@ function App() {
   }, [])
 
   console.log(blogs);
-
-
+  
   return (
     <div >
-      <h1>My Blog</h1>
+      <h1>My blog</h1>
     </div>
   );
 }
